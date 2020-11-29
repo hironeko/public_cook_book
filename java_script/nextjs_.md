@@ -7,12 +7,23 @@ npx create-next-app app-name
 ### tailwind をいれる
 
 ```shell
-yarn add tailwindcss -D
+yarn add -D tailwindcss@latest postcss@latest autoprefixer@latest
 npx tailwindcss init --full
-touch styles/tailwind.css
+touch pages/styles/tailwind.css
 ```
 
 - 以下追記
+
+pages以下に_app.tsxを作成する
+```javascript
+import './styles/tailwind.css'
+
+function App({ Component, pageProps }) {
+  return <Component {...pageProps} />
+}
+
+export default App
+```
 
 - tailwind.config.js
 ```javascript
@@ -28,7 +39,7 @@ module.exports = {
 
 ```javascript
 module.exports = {
-  plugins: ['tailwindcss', 'postcss-preset-env'],
+  plugins: ['tailwindcss', ],
 }
 ```
 
