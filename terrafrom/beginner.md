@@ -8,3 +8,8 @@ $ terraform destory
 $ terraform init
 $ terraform validate
 ```
+
+- workspace の作詞絵
+```shell
+$ terraform workspace new new_workspace_name
+```
